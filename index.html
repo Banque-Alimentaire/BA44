@@ -76,16 +76,17 @@
         <script src="data/AutresassociationshabilitesAA_42.js"></script>
         <script src="data/Autresdispositifsitinrants_43.js"></script>
         <script src="data/ChantierdinsertionBA44_44.js"></script>
-        <script src="data/CCASpartenaires_45.js"></script>
-        <script src="data/Epiceriessocialespartenaires_46.js"></script>
-        <script src="data/Dispositifsitinrantspartenaires_47.js"></script>
-        <script src="data/BanqueAlimentaire44_48.js"></script>
-        <script src="data/RgionPaysdelaLoire_49.js"></script>
-        <script src="data/DpartementLoireAtlantique_50.js"></script>
+        <script src="data/Associationspartenaires_45.js"></script>
+        <script src="data/CCASpartenaires_46.js"></script>
+        <script src="data/Epiceriessocialespartenaires_47.js"></script>
+        <script src="data/Dispositifsitinrantspartenaires_48.js"></script>
+        <script src="data/BanqueAlimentaire44_49.js"></script>
+        <script src="data/RgionPaysdelaLoire_50.js"></script>
+        <script src="data/DpartementLoireAtlantique_51.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[46.86112069065787,-2.5107155731915003],[47.973466995541195,0.3401044529831791]]);
+        }).fitBounds([[46.960781984442875,-2.6821246629665056],[47.68839353313458,-0.7815779788500493]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -1651,8 +1652,7 @@
         function pop_Zonesblanchesdeloffreetdelaidealimentaires_26(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Commune</th>\
-                        <td>' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1686,11 +1686,11 @@
             style: style_Zonesblanchesdeloffreetdelaidealimentaires_26_0,
         });
         bounds_group.addLayer(layer_Zonesblanchesdeloffreetdelaidealimentaires_26);
+        map.addLayer(layer_Zonesblanchesdeloffreetdelaidealimentaires_26);
         function pop_Zonesblanchesdeloffrealimentaireclassique_27(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Commune</th>\
-                        <td>' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1727,12 +1727,10 @@
         function pop_SuprettesetEpiceries_28(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Type de commerce </th>\
-                        <td>' + (feature.properties['equipmen_1'] !== null ? autolinker.link(feature.properties['equipmen_1'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['equipmen_1'] !== null ? autolinker.link(feature.properties['equipmen_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">EPCI</th>\
-                        <td>' + (feature.properties['epci_name'] !== null ? autolinker.link(feature.properties['epci_name'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['epci_name'] !== null ? autolinker.link(feature.properties['epci_name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1774,15 +1772,14 @@
             },
         });
         bounds_group.addLayer(layer_SuprettesetEpiceries_28);
+        map.addLayer(layer_SuprettesetEpiceries_28);
         function pop_HypermarchsetSupermarchs_29(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Type de commerce </th>\
-                        <td>' + (feature.properties['equipmen_1'] !== null ? autolinker.link(feature.properties['equipmen_1'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['equipmen_1'] !== null ? autolinker.link(feature.properties['equipmen_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">EPCI</th>\
-                        <td>' + (feature.properties['epci_name'] !== null ? autolinker.link(feature.properties['epci_name'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['epci_name'] !== null ? autolinker.link(feature.properties['epci_name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1824,23 +1821,20 @@
             },
         });
         bounds_group.addLayer(layer_HypermarchsetSupermarchs_29);
+        map.addLayer(layer_HypermarchsetSupermarchs_29);
         function pop_Producteursproduitsdelamer_30(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de production</th>\
-                        <td>' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Telephone</th>\
-                        <td>' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1882,23 +1876,20 @@
             },
         });
         bounds_group.addLayer(layer_Producteursproduitsdelamer_30);
+        map.addLayer(layer_Producteursproduitsdelamer_30);
         function pop_Producteursviandes_31(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de production</th>\
-                        <td>' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Telephone</th>\
-                        <td>' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1940,23 +1931,20 @@
             },
         });
         bounds_group.addLayer(layer_Producteursviandes_31);
+        map.addLayer(layer_Producteursviandes_31);
         function pop_Producteursproduitslaitiers_32(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de production</th>\
-                        <td>' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Telephone</th>\
-                        <td>' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -1998,23 +1986,20 @@
             },
         });
         bounds_group.addLayer(layer_Producteursproduitslaitiers_32);
+        map.addLayer(layer_Producteursproduitslaitiers_32);
         function pop_ProducteursetgrossistesFL_33(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de production</th>\
-                        <td>' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Telephone</th>\
-                        <td>' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -2056,23 +2041,20 @@
             },
         });
         bounds_group.addLayer(layer_ProducteursetgrossistesFL_33);
+        map.addLayer(layer_ProducteursetgrossistesFL_33);
         function pop_Maraichers_34(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Societés'] !== null ? autolinker.link(feature.properties['Societés'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Type de production</th>\
-                        <td>' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Telephone</th>\
-                        <td>' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -2114,6 +2096,7 @@
             },
         });
         bounds_group.addLayer(layer_Maraichers_34);
+        map.addLayer(layer_Maraichers_34);
         function pop_Communesavecaidealimentaire_35(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -2152,7 +2135,6 @@
             style: style_Communesavecaidealimentaire_35_0,
         });
         bounds_group.addLayer(layer_Communesavecaidealimentaire_35);
-        map.addLayer(layer_Communesavecaidealimentaire_35);
         function pop_Zonesblanchesdelaidealimentaire_36(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -2302,7 +2284,7 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/Restos_du_coeur_Logo.svg',
+            iconUrl: 'markers/RDC (fond blanc).svg',
             iconSize: [19.0, 19.0]
         }),
                 interactive: true,
@@ -2368,7 +2350,7 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/secours populaire.svg',
+            iconUrl: 'markers/Secours Populaire Français.svg',
             iconSize: [19.0, 19.0]
         }),
                 interactive: true,
@@ -2708,77 +2690,7 @@
         });
         bounds_group.addLayer(layer_ChantierdinsertionBA44_44);
         map.addLayer(layer_ChantierdinsertionBA44_44);
-        function pop_CCASpartenaires_45(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Nom</th>\
-                        <td>' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Adresse</th>\
-                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">C P</th>\
-                        <td>' + (feature.properties['C P'] !== null ? autolinker.link(feature.properties['C P'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Ville</th>\
-                        <td>' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Territoire</th>\
-                        <td>' + (feature.properties['Répartiti'] !== null ? autolinker.link(feature.properties['Répartiti'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Tel</th>\
-                        <td>' + (feature.properties['Téléphon'] !== null ? autolinker.link(feature.properties['Téléphon'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Contact</th>\
-                        <td>' + (feature.properties['COURRIEL'] !== null ? autolinker.link(feature.properties['COURRIEL'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_CCASpartenaires_45_0() {
-            return {
-                pane: 'pane_CCASpartenaires_45',
-                radius: 4.0,
-                opacity: 1,
-                color: 'rgba(252,124,4,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 2.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,255,255,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_CCASpartenaires_45');
-        map.getPane('pane_CCASpartenaires_45').style.zIndex = 445;
-        map.getPane('pane_CCASpartenaires_45').style['mix-blend-mode'] = 'normal';
-        var layer_CCASpartenaires_45 = new L.geoJson(json_CCASpartenaires_45, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_CCASpartenaires_45',
-            layerName: 'layer_CCASpartenaires_45',
-            pane: 'pane_CCASpartenaires_45',
-            onEachFeature: pop_CCASpartenaires_45,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_CCASpartenaires_45_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_CCASpartenaires_45);
-        map.addLayer(layer_CCASpartenaires_45);
-        function pop_Epiceriessocialespartenaires_46(feature, layer) {
+        function pop_Associationspartenaires_45(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Nom</th>\
@@ -2816,9 +2728,149 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Epiceriessocialespartenaires_46_0() {
+        function style_Associationspartenaires_45_0() {
             return {
-                pane: 'pane_Epiceriessocialespartenaires_46',
+                pane: 'pane_Associationspartenaires_45',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/Banque alimenatire sf.svg',
+            iconSize: [15.2, 15.2]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Associationspartenaires_45');
+        map.getPane('pane_Associationspartenaires_45').style.zIndex = 445;
+        map.getPane('pane_Associationspartenaires_45').style['mix-blend-mode'] = 'normal';
+        var layer_Associationspartenaires_45 = new L.geoJson(json_Associationspartenaires_45, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Associationspartenaires_45',
+            layerName: 'layer_Associationspartenaires_45',
+            pane: 'pane_Associationspartenaires_45',
+            onEachFeature: pop_Associationspartenaires_45,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_Associationspartenaires_45_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Associationspartenaires_45);
+        map.addLayer(layer_Associationspartenaires_45);
+        function pop_CCASpartenaires_46(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Nom</th>\
+                        <td>' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Adresse</th>\
+                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">C P</th>\
+                        <td>' + (feature.properties['C P'] !== null ? autolinker.link(feature.properties['C P'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Ville</th>\
+                        <td>' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Territoire</th>\
+                        <td>' + (feature.properties['Répartiti'] !== null ? autolinker.link(feature.properties['Répartiti'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tel</th>\
+                        <td>' + (feature.properties['Téléphon'] !== null ? autolinker.link(feature.properties['Téléphon'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Contact</th>\
+                        <td>' + (feature.properties['COURRIEL'] !== null ? autolinker.link(feature.properties['COURRIEL'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_CCASpartenaires_46_0() {
+            return {
+                pane: 'pane_CCASpartenaires_46',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(252,124,4,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,255,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_CCASpartenaires_46');
+        map.getPane('pane_CCASpartenaires_46').style.zIndex = 446;
+        map.getPane('pane_CCASpartenaires_46').style['mix-blend-mode'] = 'normal';
+        var layer_CCASpartenaires_46 = new L.geoJson(json_CCASpartenaires_46, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CCASpartenaires_46',
+            layerName: 'layer_CCASpartenaires_46',
+            pane: 'pane_CCASpartenaires_46',
+            onEachFeature: pop_CCASpartenaires_46,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_CCASpartenaires_46_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_CCASpartenaires_46);
+        map.addLayer(layer_CCASpartenaires_46);
+        function pop_Epiceriessocialespartenaires_47(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Nom</th>\
+                        <td>' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Adresse</th>\
+                        <td>' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">C P</th>\
+                        <td>' + (feature.properties['C P'] !== null ? autolinker.link(feature.properties['C P'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Ville</th>\
+                        <td>' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Territoire</th>\
+                        <td>' + (feature.properties['Territoire'] !== null ? autolinker.link(feature.properties['Territoire'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Tél</th>\
+                        <td>' + (feature.properties['Tél'] !== null ? autolinker.link(feature.properties['Tél'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Mail</th>\
+                        <td>' + (feature.properties['Mail'] !== null ? autolinker.link(feature.properties['Mail'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Site</th>\
+                        <td>' + (feature.properties['Site'] !== null ? autolinker.link(feature.properties['Site'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Epiceriessocialespartenaires_47_0() {
+            return {
+                pane: 'pane_Epiceriessocialespartenaires_47',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
@@ -2832,27 +2884,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Epiceriessocialespartenaires_46');
-        map.getPane('pane_Epiceriessocialespartenaires_46').style.zIndex = 446;
-        map.getPane('pane_Epiceriessocialespartenaires_46').style['mix-blend-mode'] = 'normal';
-        var layer_Epiceriessocialespartenaires_46 = new L.geoJson(json_Epiceriessocialespartenaires_46, {
+        map.createPane('pane_Epiceriessocialespartenaires_47');
+        map.getPane('pane_Epiceriessocialespartenaires_47').style.zIndex = 447;
+        map.getPane('pane_Epiceriessocialespartenaires_47').style['mix-blend-mode'] = 'normal';
+        var layer_Epiceriessocialespartenaires_47 = new L.geoJson(json_Epiceriessocialespartenaires_47, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Epiceriessocialespartenaires_46',
-            layerName: 'layer_Epiceriessocialespartenaires_46',
-            pane: 'pane_Epiceriessocialespartenaires_46',
-            onEachFeature: pop_Epiceriessocialespartenaires_46,
+            dataVar: 'json_Epiceriessocialespartenaires_47',
+            layerName: 'layer_Epiceriessocialespartenaires_47',
+            pane: 'pane_Epiceriessocialespartenaires_47',
+            onEachFeature: pop_Epiceriessocialespartenaires_47,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Epiceriessocialespartenaires_46_0(feature));
+                return L.circleMarker(latlng, style_Epiceriessocialespartenaires_47_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Epiceriessocialespartenaires_46);
-        map.addLayer(layer_Epiceriessocialespartenaires_46);
-        function pop_Dispositifsitinrantspartenaires_47(feature, layer) {
+        bounds_group.addLayer(layer_Epiceriessocialespartenaires_47);
+        map.addLayer(layer_Epiceriessocialespartenaires_47);
+        function pop_Dispositifsitinrantspartenaires_48(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Nom</th>\
@@ -2878,9 +2930,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Dispositifsitinrantspartenaires_47_0() {
+        function style_Dispositifsitinrantspartenaires_48_0() {
             return {
-                pane: 'pane_Dispositifsitinrantspartenaires_47',
+                pane: 'pane_Dispositifsitinrantspartenaires_48',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
@@ -2890,27 +2942,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Dispositifsitinrantspartenaires_47');
-        map.getPane('pane_Dispositifsitinrantspartenaires_47').style.zIndex = 447;
-        map.getPane('pane_Dispositifsitinrantspartenaires_47').style['mix-blend-mode'] = 'normal';
-        var layer_Dispositifsitinrantspartenaires_47 = new L.geoJson(json_Dispositifsitinrantspartenaires_47, {
+        map.createPane('pane_Dispositifsitinrantspartenaires_48');
+        map.getPane('pane_Dispositifsitinrantspartenaires_48').style.zIndex = 448;
+        map.getPane('pane_Dispositifsitinrantspartenaires_48').style['mix-blend-mode'] = 'normal';
+        var layer_Dispositifsitinrantspartenaires_48 = new L.geoJson(json_Dispositifsitinrantspartenaires_48, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Dispositifsitinrantspartenaires_47',
-            layerName: 'layer_Dispositifsitinrantspartenaires_47',
-            pane: 'pane_Dispositifsitinrantspartenaires_47',
-            onEachFeature: pop_Dispositifsitinrantspartenaires_47,
+            dataVar: 'json_Dispositifsitinrantspartenaires_48',
+            layerName: 'layer_Dispositifsitinrantspartenaires_48',
+            pane: 'pane_Dispositifsitinrantspartenaires_48',
+            onEachFeature: pop_Dispositifsitinrantspartenaires_48,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_Dispositifsitinrantspartenaires_47_0(feature));
+                return L.marker(latlng, style_Dispositifsitinrantspartenaires_48_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Dispositifsitinrantspartenaires_47);
-        map.addLayer(layer_Dispositifsitinrantspartenaires_47);
-        function pop_BanqueAlimentaire44_48(feature, layer) {
+        bounds_group.addLayer(layer_Dispositifsitinrantspartenaires_48);
+        map.addLayer(layer_Dispositifsitinrantspartenaires_48);
+        function pop_BanqueAlimentaire44_49(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Nom</th>\
@@ -2932,44 +2984,44 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_BanqueAlimentaire44_48_0() {
+        function style_BanqueAlimentaire44_49_0() {
             return {
-                pane: 'pane_BanqueAlimentaire44_48',
+                pane: 'pane_BanqueAlimentaire44_49',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/BA fond blanc .svg',
-            iconSize: [45.599999999999994, 45.599999999999994]
+            iconUrl: 'markers/BA (entrepôt).svg',
+            iconSize: [26.599999999999998, 26.599999999999998]
         }),
                 interactive: true,
             }
         }
-        map.createPane('pane_BanqueAlimentaire44_48');
-        map.getPane('pane_BanqueAlimentaire44_48').style.zIndex = 448;
-        map.getPane('pane_BanqueAlimentaire44_48').style['mix-blend-mode'] = 'normal';
-        var layer_BanqueAlimentaire44_48 = new L.geoJson(json_BanqueAlimentaire44_48, {
+        map.createPane('pane_BanqueAlimentaire44_49');
+        map.getPane('pane_BanqueAlimentaire44_49').style.zIndex = 449;
+        map.getPane('pane_BanqueAlimentaire44_49').style['mix-blend-mode'] = 'normal';
+        var layer_BanqueAlimentaire44_49 = new L.geoJson(json_BanqueAlimentaire44_49, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BanqueAlimentaire44_48',
-            layerName: 'layer_BanqueAlimentaire44_48',
-            pane: 'pane_BanqueAlimentaire44_48',
-            onEachFeature: pop_BanqueAlimentaire44_48,
+            dataVar: 'json_BanqueAlimentaire44_49',
+            layerName: 'layer_BanqueAlimentaire44_49',
+            pane: 'pane_BanqueAlimentaire44_49',
+            onEachFeature: pop_BanqueAlimentaire44_49,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_BanqueAlimentaire44_48_0(feature));
+                return L.marker(latlng, style_BanqueAlimentaire44_49_0(feature));
             },
         });
-        bounds_group.addLayer(layer_BanqueAlimentaire44_48);
-        map.addLayer(layer_BanqueAlimentaire44_48);
-        function pop_RgionPaysdelaLoire_49(feature, layer) {
+        bounds_group.addLayer(layer_BanqueAlimentaire44_49);
+        map.addLayer(layer_BanqueAlimentaire44_49);
+        function pop_RgionPaysdelaLoire_50(feature, layer) {
         }
 
-        function style_RgionPaysdelaLoire_49_0() {
+        function style_RgionPaysdelaLoire_50_0() {
             return {
-                pane: 'pane_RgionPaysdelaLoire_49',
+                pane: 'pane_RgionPaysdelaLoire_50',
                 opacity: 1,
                 color: 'rgba(228,26,28,1.0)',
                 dashArray: '',
@@ -2980,26 +3032,26 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_RgionPaysdelaLoire_49');
-        map.getPane('pane_RgionPaysdelaLoire_49').style.zIndex = 449;
-        map.getPane('pane_RgionPaysdelaLoire_49').style['mix-blend-mode'] = 'normal';
-        var layer_RgionPaysdelaLoire_49 = new L.geoJson(json_RgionPaysdelaLoire_49, {
+        map.createPane('pane_RgionPaysdelaLoire_50');
+        map.getPane('pane_RgionPaysdelaLoire_50').style.zIndex = 450;
+        map.getPane('pane_RgionPaysdelaLoire_50').style['mix-blend-mode'] = 'normal';
+        var layer_RgionPaysdelaLoire_50 = new L.geoJson(json_RgionPaysdelaLoire_50, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_RgionPaysdelaLoire_49',
-            layerName: 'layer_RgionPaysdelaLoire_49',
-            pane: 'pane_RgionPaysdelaLoire_49',
-            onEachFeature: pop_RgionPaysdelaLoire_49,
-            style: style_RgionPaysdelaLoire_49_0,
+            dataVar: 'json_RgionPaysdelaLoire_50',
+            layerName: 'layer_RgionPaysdelaLoire_50',
+            pane: 'pane_RgionPaysdelaLoire_50',
+            onEachFeature: pop_RgionPaysdelaLoire_50,
+            style: style_RgionPaysdelaLoire_50_0,
         });
-        bounds_group.addLayer(layer_RgionPaysdelaLoire_49);
-        map.addLayer(layer_RgionPaysdelaLoire_49);
-        function pop_DpartementLoireAtlantique_50(feature, layer) {
+        bounds_group.addLayer(layer_RgionPaysdelaLoire_50);
+        map.addLayer(layer_RgionPaysdelaLoire_50);
+        function pop_DpartementLoireAtlantique_51(feature, layer) {
         }
 
-        function style_DpartementLoireAtlantique_50_0() {
+        function style_DpartementLoireAtlantique_51_0() {
             return {
-                pane: 'pane_DpartementLoireAtlantique_50',
+                pane: 'pane_DpartementLoireAtlantique_51',
                 opacity: 1,
                 color: 'rgba(33,76,111,1.0)',
                 dashArray: '',
@@ -3010,22 +3062,22 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_DpartementLoireAtlantique_50');
-        map.getPane('pane_DpartementLoireAtlantique_50').style.zIndex = 450;
-        map.getPane('pane_DpartementLoireAtlantique_50').style['mix-blend-mode'] = 'normal';
-        var layer_DpartementLoireAtlantique_50 = new L.geoJson(json_DpartementLoireAtlantique_50, {
+        map.createPane('pane_DpartementLoireAtlantique_51');
+        map.getPane('pane_DpartementLoireAtlantique_51').style.zIndex = 451;
+        map.getPane('pane_DpartementLoireAtlantique_51').style['mix-blend-mode'] = 'normal';
+        var layer_DpartementLoireAtlantique_51 = new L.geoJson(json_DpartementLoireAtlantique_51, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_DpartementLoireAtlantique_50',
-            layerName: 'layer_DpartementLoireAtlantique_50',
-            pane: 'pane_DpartementLoireAtlantique_50',
-            onEachFeature: pop_DpartementLoireAtlantique_50,
-            style: style_DpartementLoireAtlantique_50_0,
+            dataVar: 'json_DpartementLoireAtlantique_51',
+            layerName: 'layer_DpartementLoireAtlantique_51',
+            pane: 'pane_DpartementLoireAtlantique_51',
+            onEachFeature: pop_DpartementLoireAtlantique_51,
+            style: style_DpartementLoireAtlantique_51_0,
         });
-        bounds_group.addLayer(layer_DpartementLoireAtlantique_50);
-        map.addLayer(layer_DpartementLoireAtlantique_50);
+        bounds_group.addLayer(layer_DpartementLoireAtlantique_51);
+        map.addLayer(layer_DpartementLoireAtlantique_51);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/DpartementLoireAtlantique_50.png" /> Département Loire Atlantique': layer_DpartementLoireAtlantique_50,'<img src="legend/RgionPaysdelaLoire_49.png" /> Région Pays de la Loire': layer_RgionPaysdelaLoire_49,'<img src="legend/BanqueAlimentaire44_48.png" /> Banque Alimentaire 44': layer_BanqueAlimentaire44_48,'<img src="legend/Dispositifsitinrantspartenaires_47.png" /> Dispositifs itinérants partenaires': layer_Dispositifsitinrantspartenaires_47,'<img src="legend/Epiceriessocialespartenaires_46.png" /> Epiceries sociales partenaires': layer_Epiceriessocialespartenaires_46,'<img src="legend/CCASpartenaires_45.png" /> CCAS partenaires': layer_CCASpartenaires_45,'<img src="legend/ChantierdinsertionBA44_44.png" /> Chantier d\'insertion - BA 44': layer_ChantierdinsertionBA44_44,'<img src="legend/Autresdispositifsitinrants_43.png" /> Autres dispositifs itinérants': layer_Autresdispositifsitinrants_43,'<img src="legend/AutresassociationshabilitesAA_42.png" /> Autres associations habilitées (AA)': layer_AutresassociationshabilitesAA_42,'<img src="legend/RseauCocagne44_41.png" /> Réseau Cocagne 44': layer_RseauCocagne44_41,'<img src="legend/ANDESnonpartenaires_40.png" /> ANDES (non partenaires)': layer_ANDESnonpartenaires_40,'<img src="legend/SecoursPopulaire44_39.png" /> Secours Populaire 44': layer_SecoursPopulaire44_39,'<img src="legend/RestoduCoeur44_38.png" /> Resto du Coeur 44': layer_RestoduCoeur44_38,'<img src="legend/SecoursCatholique44_37.png" /> Secours Catholique 44': layer_SecoursCatholique44_37,'<img src="legend/Zonesblanchesdelaidealimentaire_36.png" /> Zones blanches de l\'aide alimentaire': layer_Zonesblanchesdelaidealimentaire_36,'<img src="legend/Communesavecaidealimentaire_35.png" /> Communes avec aide alimentaire': layer_Communesavecaidealimentaire_35,'<img src="legend/Maraichers_34.png" /> Maraichers': layer_Maraichers_34,'<img src="legend/ProducteursetgrossistesFL_33.png" /> Producteurs et grossistes F&L': layer_ProducteursetgrossistesFL_33,'<img src="legend/Producteursproduitslaitiers_32.png" /> Producteurs produits laitiers': layer_Producteursproduitslaitiers_32,'<img src="legend/Producteursviandes_31.png" /> Producteurs viandes': layer_Producteursviandes_31,'<img src="legend/Producteursproduitsdelamer_30.png" /> Producteurs produits de la mer': layer_Producteursproduitsdelamer_30,'<img src="legend/HypermarchsetSupermarchs_29.png" /> Hypermarchés et Supermarchés': layer_HypermarchsetSupermarchs_29,'<img src="legend/SuprettesetEpiceries_28.png" /> Supérettes et Epiceries': layer_SuprettesetEpiceries_28,'<img src="legend/Zonesblanchesdeloffrealimentaireclassique_27.png" /> Zones blanches de l\'offre alimentaire classique': layer_Zonesblanchesdeloffrealimentaireclassique_27,'<img src="legend/Zonesblanchesdeloffreetdelaidealimentaires_26.png" /> Zones blanches de l\'offre et de l\'aide alimentaires': layer_Zonesblanchesdeloffreetdelaidealimentaires_26,'ZRR - Loire Atlantique<br /><table><tr><td style="text-align: center;"><img src="legend/ZRRLoireAtlantique_25_PPartiellementclasséeenZRR0.png" /></td><td>P - Partiellement classée en ZRR</td></tr><tr><td style="text-align: center;"><img src="legend/ZRRLoireAtlantique_25_CClasséeenZRR1.png" /></td><td>C - Classée en ZRR</td></tr></table>': layer_ZRRLoireAtlantique_25,'Taux de pauvreté EPCI - Loire Altantique<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_52590.png" /></td><td>5,2 - 5,9</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_59761.png" /></td><td>5,9 - 7,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_76942.png" /></td><td>7,6 - 9,4</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_941373.png" /></td><td>9,4 - 13,7</td></tr></table>': layer_TauxdepauvretEPCILoireAltantique_24,'Taux de chômage - Loire Atlantique<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_46770.png" /></td><td>4,6 - 7,7</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_77101.png" /></td><td>7,7 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_101322.png" /></td><td>10 - 13,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_1321753.png" /></td><td>13,2 - 17,5</td></tr></table>': layer_TauxdechmageLoireAtlantique_23,'PAT 44<br /><table><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesdErdreetGesvres0.png" /></td><td>Communauté de Communes d\'Erdre et Gesvres</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesdeSèvreetLoire1.png" /></td><td>Communauté de Communes de Sèvre et Loire</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesEstuaireetSillon2.png" /></td><td>Communauté de Communes Estuaire et Sillon</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_Nantesmétropole3.png" /></td><td>Nantes métropole</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_PETRduPaysdeRetz4.png" /></td><td>PETR du Pays de Retz</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_PNRdeBrière5.png" /></td><td>PNR de Brière</td></tr></table>': layer_PAT44_22,'<img src="legend/Arrtsdetram_21.png" /> Arrêts de tram': layer_Arrtsdetram_21,'Tram - Nantes Métropole<br /><table><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_32.png" /></td><td>3</td></tr></table>': layer_TramNantesMtropole_20,'<img src="legend/ArrtsBusway_19.png" /> Arrêts Busway': layer_ArrtsBusway_19,'<img src="legend/LignesBuswayNantesMtropole_18.png" /> Lignes Busway - Nantes Métropole': layer_LignesBuswayNantesMtropole_18,'<img src="legend/ArrtsChronobus_17.png" /> Arrêts Chronobus': layer_ArrtsChronobus_17,'<img src="legend/LignesChronobusNantesMtropole_16.png" /> Lignes Chronobus - Nantes Métropole': layer_LignesChronobusNantesMtropole_16,'<img src="legend/Arrtsbuslignesrgulires_15.png" /> Arrêts bus lignes régulières': layer_Arrtsbuslignesrgulires_15,'<img src="legend/LignesdebusrguliresNantesMtropole_14.png" /> Lignes de bus régulières - Nantes Métropole': layer_LignesdebusrguliresNantesMtropole_14,'<img src="legend/ArrtsbusExpress_13.png" /> Arrêts bus Express': layer_ArrtsbusExpress_13,'<img src="legend/BusExpressNantesMtropole_12.png" /> Bus Express - Nantes Métropole': layer_BusExpressNantesMtropole_12,'<img src="legend/FerryNantesMtropole_11.png" /> Ferry - Nantes Métropole': layer_FerryNantesMtropole_11,'Bus de nuit - Luciole - Nantes M<br /><table><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LC0.png" /></td><td>LC</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LN1.png" /></td><td>LN</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LO2.png" /></td><td>LO</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LS3.png" /></td><td>LS</td></tr></table>': layer_BusdenuitLucioleNantesM_10,'<img src="legend/ArrtsStNazaireAgglo_9.png" /> Arrêts St Nazaire Agglo': layer_ArrtsStNazaireAgglo_9,'<img src="legend/LignesurbainesStNazaireAgglo_8.png" /> Lignes urbaines - St Nazaire Agglo': layer_LignesurbainesStNazaireAgglo_8,'<img src="legend/LigneHlyceBusHNDSStNazaireAgglo_7.png" /> Ligne Hélyce - Bus HNDS - St Nazaire Agglo': layer_LigneHlyceBusHNDSStNazaireAgglo_7,'<img src="legend/LignesTybusStNazaireAgglo_6.png" /> Lignes Ty\'bus - St Nazaire Agglo': layer_LignesTybusStNazaireAgglo_6,'<img src="legend/AutreslignesStNazaireAgglo_5.png" /> Autres lignes - St Nazaire Agglo': layer_AutreslignesStNazaireAgglo_5,'<img src="legend/ArrtsLoireAtlantiqueAlop_4.png" /> Arrêts Loire Atlantique - Aléop': layer_ArrtsLoireAtlantiqueAlop_4,'<img src="legend/LignesbusLoireAltantiqueAlop_3.png" /> Lignes bus Loire Altantique - Aléop': layer_LignesbusLoireAltantiqueAlop_3,'<img src="legend/CommunesLoireAtlantique_2.png" /> Communes - Loire Atlantique': layer_CommunesLoireAtlantique_2,'<img src="legend/EPCILoireAltantique_1.png" /> EPCI Loire Altantique': layer_EPCILoireAltantique_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/DpartementLoireAtlantique_51.png" /> Département Loire Atlantique': layer_DpartementLoireAtlantique_51,'<img src="legend/RgionPaysdelaLoire_50.png" /> Région Pays de la Loire': layer_RgionPaysdelaLoire_50,'<img src="legend/BanqueAlimentaire44_49.png" /> Banque Alimentaire 44': layer_BanqueAlimentaire44_49,'<img src="legend/Dispositifsitinrantspartenaires_48.png" /> Dispositifs itinérants partenaires': layer_Dispositifsitinrantspartenaires_48,'<img src="legend/Epiceriessocialespartenaires_47.png" /> Epiceries sociales partenaires': layer_Epiceriessocialespartenaires_47,'<img src="legend/CCASpartenaires_46.png" /> CCAS partenaires': layer_CCASpartenaires_46,'<img src="legend/Associationspartenaires_45.png" /> Associations partenaires': layer_Associationspartenaires_45,'<img src="legend/ChantierdinsertionBA44_44.png" /> Chantier d\'insertion - BA 44': layer_ChantierdinsertionBA44_44,'<img src="legend/Autresdispositifsitinrants_43.png" /> Autres dispositifs itinérants': layer_Autresdispositifsitinrants_43,'<img src="legend/AutresassociationshabilitesAA_42.png" /> Autres associations habilitées (AA)': layer_AutresassociationshabilitesAA_42,'<img src="legend/RseauCocagne44_41.png" /> Réseau Cocagne 44': layer_RseauCocagne44_41,'<img src="legend/ANDESnonpartenaires_40.png" /> ANDES (non partenaires)': layer_ANDESnonpartenaires_40,'<img src="legend/SecoursPopulaire44_39.png" /> Secours Populaire 44': layer_SecoursPopulaire44_39,'<img src="legend/RestoduCoeur44_38.png" /> Resto du Coeur 44': layer_RestoduCoeur44_38,'<img src="legend/SecoursCatholique44_37.png" /> Secours Catholique 44': layer_SecoursCatholique44_37,'<img src="legend/Zonesblanchesdelaidealimentaire_36.png" /> Zones blanches de l\'aide alimentaire': layer_Zonesblanchesdelaidealimentaire_36,'<img src="legend/Communesavecaidealimentaire_35.png" /> Communes avec aide alimentaire': layer_Communesavecaidealimentaire_35,'<img src="legend/Maraichers_34.png" /> Maraichers': layer_Maraichers_34,'<img src="legend/ProducteursetgrossistesFL_33.png" /> Producteurs et grossistes F&L': layer_ProducteursetgrossistesFL_33,'<img src="legend/Producteursproduitslaitiers_32.png" /> Producteurs produits laitiers': layer_Producteursproduitslaitiers_32,'<img src="legend/Producteursviandes_31.png" /> Producteurs viandes': layer_Producteursviandes_31,'<img src="legend/Producteursproduitsdelamer_30.png" /> Producteurs produits de la mer': layer_Producteursproduitsdelamer_30,'<img src="legend/HypermarchsetSupermarchs_29.png" /> Hypermarchés et Supermarchés': layer_HypermarchsetSupermarchs_29,'<img src="legend/SuprettesetEpiceries_28.png" /> Supérettes et Epiceries': layer_SuprettesetEpiceries_28,'<img src="legend/Zonesblanchesdeloffrealimentaireclassique_27.png" /> Zones blanches de l\'offre alimentaire classique': layer_Zonesblanchesdeloffrealimentaireclassique_27,'<img src="legend/Zonesblanchesdeloffreetdelaidealimentaires_26.png" /> Zones blanches de l\'offre et de l\'aide alimentaires': layer_Zonesblanchesdeloffreetdelaidealimentaires_26,'ZRR - Loire Atlantique<br /><table><tr><td style="text-align: center;"><img src="legend/ZRRLoireAtlantique_25_PPartiellementclasséeenZRR0.png" /></td><td>P - Partiellement classée en ZRR</td></tr><tr><td style="text-align: center;"><img src="legend/ZRRLoireAtlantique_25_CClasséeenZRR1.png" /></td><td>C - Classée en ZRR</td></tr></table>': layer_ZRRLoireAtlantique_25,'Taux de pauvreté EPCI - Loire Altantique<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_52590.png" /></td><td>5,2 - 5,9</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_59761.png" /></td><td>5,9 - 7,6</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_76942.png" /></td><td>7,6 - 9,4</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdepauvretEPCILoireAltantique_24_941373.png" /></td><td>9,4 - 13,7</td></tr></table>': layer_TauxdepauvretEPCILoireAltantique_24,'Taux de chômage - Loire Atlantique<br /><table><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_46770.png" /></td><td>4,6 - 7,7</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_77101.png" /></td><td>7,7 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_101322.png" /></td><td>10 - 13,2</td></tr><tr><td style="text-align: center;"><img src="legend/TauxdechmageLoireAtlantique_23_1321753.png" /></td><td>13,2 - 17,5</td></tr></table>': layer_TauxdechmageLoireAtlantique_23,'PAT 44<br /><table><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesdErdreetGesvres0.png" /></td><td>Communauté de Communes d\'Erdre et Gesvres</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesdeSèvreetLoire1.png" /></td><td>Communauté de Communes de Sèvre et Loire</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_CommunautédeCommunesEstuaireetSillon2.png" /></td><td>Communauté de Communes Estuaire et Sillon</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_Nantesmétropole3.png" /></td><td>Nantes métropole</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_PETRduPaysdeRetz4.png" /></td><td>PETR du Pays de Retz</td></tr><tr><td style="text-align: center;"><img src="legend/PAT44_22_PNRdeBrière5.png" /></td><td>PNR de Brière</td></tr></table>': layer_PAT44_22,'<img src="legend/Arrtsdetram_21.png" /> Arrêts de tram': layer_Arrtsdetram_21,'Tram - Nantes Métropole<br /><table><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/TramNantesMtropole_20_32.png" /></td><td>3</td></tr></table>': layer_TramNantesMtropole_20,'<img src="legend/ArrtsBusway_19.png" /> Arrêts Busway': layer_ArrtsBusway_19,'<img src="legend/LignesBuswayNantesMtropole_18.png" /> Lignes Busway - Nantes Métropole': layer_LignesBuswayNantesMtropole_18,'<img src="legend/ArrtsChronobus_17.png" /> Arrêts Chronobus': layer_ArrtsChronobus_17,'<img src="legend/LignesChronobusNantesMtropole_16.png" /> Lignes Chronobus - Nantes Métropole': layer_LignesChronobusNantesMtropole_16,'<img src="legend/Arrtsbuslignesrgulires_15.png" /> Arrêts bus lignes régulières': layer_Arrtsbuslignesrgulires_15,'<img src="legend/LignesdebusrguliresNantesMtropole_14.png" /> Lignes de bus régulières - Nantes Métropole': layer_LignesdebusrguliresNantesMtropole_14,'<img src="legend/ArrtsbusExpress_13.png" /> Arrêts bus Express': layer_ArrtsbusExpress_13,'<img src="legend/BusExpressNantesMtropole_12.png" /> Bus Express - Nantes Métropole': layer_BusExpressNantesMtropole_12,'<img src="legend/FerryNantesMtropole_11.png" /> Ferry - Nantes Métropole': layer_FerryNantesMtropole_11,'Bus de nuit - Luciole - Nantes M<br /><table><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LC0.png" /></td><td>LC</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LN1.png" /></td><td>LN</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LO2.png" /></td><td>LO</td></tr><tr><td style="text-align: center;"><img src="legend/BusdenuitLucioleNantesM_10_LS3.png" /></td><td>LS</td></tr></table>': layer_BusdenuitLucioleNantesM_10,'<img src="legend/ArrtsStNazaireAgglo_9.png" /> Arrêts St Nazaire Agglo': layer_ArrtsStNazaireAgglo_9,'<img src="legend/LignesurbainesStNazaireAgglo_8.png" /> Lignes urbaines - St Nazaire Agglo': layer_LignesurbainesStNazaireAgglo_8,'<img src="legend/LigneHlyceBusHNDSStNazaireAgglo_7.png" /> Ligne Hélyce - Bus HNDS - St Nazaire Agglo': layer_LigneHlyceBusHNDSStNazaireAgglo_7,'<img src="legend/LignesTybusStNazaireAgglo_6.png" /> Lignes Ty\'bus - St Nazaire Agglo': layer_LignesTybusStNazaireAgglo_6,'<img src="legend/AutreslignesStNazaireAgglo_5.png" /> Autres lignes - St Nazaire Agglo': layer_AutreslignesStNazaireAgglo_5,'<img src="legend/ArrtsLoireAtlantiqueAlop_4.png" /> Arrêts Loire Atlantique - Aléop': layer_ArrtsLoireAtlantiqueAlop_4,'<img src="legend/LignesbusLoireAltantiqueAlop_3.png" /> Lignes bus Loire Altantique - Aléop': layer_LignesbusLoireAltantiqueAlop_3,'<img src="legend/CommunesLoireAtlantique_2.png" /> Communes - Loire Atlantique': layer_CommunesLoireAtlantique_2,'<img src="legend/EPCILoireAltantique_1.png" /> EPCI Loire Altantique': layer_EPCILoireAltantique_1,"Google Road": layer_GoogleRoad_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
